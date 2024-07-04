@@ -19,12 +19,16 @@ download_mp3(url, save_path)
 
 client = OpenAI()
 
+# Load the downloaded file
 audio_file= open(save_path, "rb")
+
+# Generate transcript
 transcript = client.audio.transcriptions.create(
   model="whisper-1", 
   file=audio_file,
   response_format="text"
 )
 
+# Print the transcribed text
 print(transcript)
 
