@@ -12,7 +12,7 @@ def download_mp3(url, save_path):
     except Exception as e:
         print(f"Failed to download: {str(e)}")
 
-url = "https://zadania.aidevs.pl/data/mateusz.mp3"
+url = "url_to_mp3_file"
 save_path = "whisper-file.mp3"
 
 download_mp3(url, save_path)
